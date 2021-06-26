@@ -1,5 +1,5 @@
 # Suicide-Detection-GPT2
-Dataset to load into google collab.
+Dataset to load into google collab. 20,000 suicide/non-suicide train (even split), 10,000 suicide/non-suicide test (even split).
 
 Original source [on kaggle by Nikhileswar Komati](https://www.kaggle.com/nikhileswarkomati/suicide-watch?select=Suicide_Detection.csv). Cleaned and formatted for pytorch
 
