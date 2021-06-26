@@ -10,7 +10,7 @@ Original GPT-2 text classification by [George Mihaila](https://github.com/gmihai
 
 # Parser
 
-`sd_parser.py` was used to generate `sd.tar.xz` from `Suicide_Detection.csv` (not provided) from the kaggle link above.
+[`sd_parser.py`](https://github.com/JohnCiubuc/Suicide-Detection-GPT2/blob/main/sd_parser.py) was used to generate `sd.tar.xz` from `Suicide_Detection.csv` (not provided) from the kaggle link above.
 
 # Training Model
 
