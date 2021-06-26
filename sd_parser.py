@@ -3,25 +3,28 @@ import os
 #premake folders and download the csv from https://www.kaggle.com/nikhileswarkomati/suicide-watch?select=Suicide_Detection.csv
 data= pd.read_csv('Suicide_Detection.csv', lineterminator = '\n')
 count = [0,0]
-soft_limit = 500
+s = []
+ns = []
 for index, row in data.iterrows():
     if row['class'] == 'suicide':
-        count[0] = count[0] + 1
-        train_test = 'train'
-        if count[0] > soft_limit:
-            train_test = 'test'
-            
-        f = open(os.path.join('./SD_Data/'+train_test+'/suicide/' + str(count[0]) + '.txt'), 'w')
-        f.write(row['text'])
-        f.close()
+        s.append(row['text'])
     else:
-        count[1] = count[1] + 1
-        train_test = 'train'
-        if count[1] > soft_limit:
-            train_test = 'test'
-            
-        f = open(os.path.join('./SD_Data/'+train_test+'/non-suicide/' + str(count[1]) + '.txt'), 'w')
-        f.write(row['text'])
-        f.close()
-    if count[0] > (soft_limit*2) and count[1] > (soft_limit*2) :
-        break
+        ns.append(row['text'])
+    
+for i in range(0,10000):
+    f = open(os.path.join('./SD_Data/'+"train"+'/suicide/' + str(i) + '.txt'), 'w')
+    f.write(s[i])
+    f.close()
+   
+for i in range(10001, 15000):
+    f = open(os.path.join('./SD_Data/'+"test"+'/suicide/' + str(i) + '.txt'), 'w')
+    f.write(s[i])
+    f.close()
+for i in range(0,10000):
+    f = open(os.path.join('./SD_Data/'+"train"+'/non-suicide/' + str(i) + '.txt'), 'w')
+    f.write(ns[i])
+    f.close()
+for i in range(10001, 15000):
+    f = open(os.path.join('./SD_Data/'+"test"+'/non-suicide/' + str(i) + '.txt'), 'w')
+    f.write(ns[i])
+    f.close()
