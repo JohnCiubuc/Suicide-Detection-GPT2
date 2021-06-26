@@ -1,6 +1,6 @@
 # Suicide-Detection-GPT2
 
-Proof-of-concept to determine potential suicide/depression risk from text. Idea collaboration by myself and Ebrahim Payberah
+Proof-of-concept to determine potential suicide/depression risk from text. Idea was developed by a collaboration between myself and Ebrahim Payberah
 
 This repository has a Dataset to load into google collab. 20,000 suicide/non-suicide train (even split), 10,000 suicide/non-suicide test (even split).
 
